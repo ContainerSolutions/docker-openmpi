@@ -41,7 +41,16 @@ base package for docker cluster with openmpi
     4c1364ddf9d9
     4c1364ddf9d9
     ```
-4. shutdown cluster
+4. compile an application
+    ```
+    cd /mpi-app/hello-world/
+    make 
+    ```
+5. run application
+    ```
+    mpirun -np 16 /mpi-app/hello-world/mpi_hello_world
+    ```
+6. shutdown cluster
     ```
     $ docker-compose down -v
     ```
